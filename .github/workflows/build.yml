@@ -14,7 +14,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: name of package
-        run: |
-          echo "Username : ${{ secrets.ACTOR}}"
-          echo "Password : ${{ secrets.TOKEN}}"
+        env:
+          GITHUB_ACTOR : ${{ secrets.ACTOR}}"
+          GITHUB_TOKEN : ${{ secrets.TOKEN}}"
       
