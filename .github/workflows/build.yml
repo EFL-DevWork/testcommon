@@ -13,8 +13,9 @@ jobs:
           distribution: 'temurin'
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Credentials of package
+      - name: build
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        run: ./gradlew build
       
